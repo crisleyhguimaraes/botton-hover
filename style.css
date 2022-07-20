@@ -1,0 +1,62 @@
+*{
+    background-color: black;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color:azure;
+}
+
+section.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 15% auto;
+    text-align: center;
+}
+
+button:hover{
+    cursor: pointer
+}
+
+button{
+    background: transparent;
+    outline: none;
+    padding: 20px 60px;
+    border: 2px solid azure;
+    overflow: hidden;
+}
+
+button:hover:before{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+button:before{
+    content: attr(onHover);
+    position: absolute;
+    top: 1em;
+    left: 0em;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 5em;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition:  all .5 ease-in-out;
+}
+
+button:hover div{
+    opacity: 0;
+    transform: translate(100%,0);
+}
+
+button div{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: .5em;
+    transition: all .5 ease-in-out;
+}
